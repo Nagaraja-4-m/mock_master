@@ -1,0 +1,94 @@
+{% extends '/admin/admin_base.html' %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+</head>
+
+<style>
+    .table_content
+    {
+        text-decoration: none;
+    }
+    .edit_buttn
+    {
+        background-color: rgb(34, 142, 236);
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size:16px;       
+    }
+    .delete_buttn
+    {
+        background-color: rgb(238, 16, 9);
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size:16px;       
+    }
+    .delete_buttn:hover
+    {
+        background-color: rgb(156, 15, 10);   
+        color: white;
+    }
+    .edit_buttn:hover
+    {
+        background-color: rgb(8, 102, 185);
+        color: white;
+    }
+</style>
+
+<!-- display subject details -->
+<div class="container">
+    <div class="table-responsive"> 
+        <table class="table table-hover table_content  ">
+            <thead>
+                <tr class="active" >
+                    <th>Sl.no</th>
+                    <th>Subject Id</th>
+                    <th>Subject Name</th>
+                    <th>Category</th>
+                    <th >Questions</th>
+                    <th style="padding-left: 52px;">Action</th>
+                </tr>
+            </thead>
+            {% set count=0 %}
+            <tbody  class="table-bordered" >
+                {% for i in sub_list %}
+                    <tr>
+                        {%  set count=loop.index %}
+                        <th>{{count}}</th>
+                        
+                        {% for item in i %}
+                            <th>{{item}}</th>
+                        {% endfor %} 
+                    
+                        <th>{{ No_Questions[count-1] }}</th>
+                    
+                        <th>
+                            <table>
+                                <tr>
+                                    <th> <a  href="{{ url_for('subject_edit',sub_id=i[0])}}" ><button class="btn edit_buttn"  name="edit_btn" type="submit">Edit</button></a></th>
+                                    <th><a  href="{{ url_for('subject_delete',sub_id=i[0])}}"><button  class="btn delete_buttn"  name="delete_btn" type="submit" value="{{i[0]}}">Delete</button></a></th>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                {% endfor %}   
+                            
+
+            </tbody>
+        </table>
+</div>
+</div>
+
+<!-- display subject details -->
+
+{% endblock content %}

@@ -1,0 +1,121 @@
+"QPO, NML, KJI, _____, EDC",,,,,,,A. HGF,B. CAB,C. JKL,D. GHI,A. HGF,,,This series consists of letters in a reverse alphabetical order.
+" JAK, KBL, LCM, MDN, _____",,,,,,,A. OEP,B. NEO,C. MEN,D. PFQ,B. NEO,,,This is an alternating series in alphabetical order. The middle letters follow the order ABCDE. The first and third letters are alphabetical beginning with J. The third letter is repeated as a first letter in each subsequent three-letter segment.
+"ELFA, GLHA, ILJA, _____, MLNA",,,,,,,A. OLPA,B. KLMA,C. LLMA,D. KLLA,D. KLLA,,,"The second and forth letters in the series, L and A, are static. The first and third letters consist of an alphabetical order beginning with the letter E."
+"B2CD,  _____ BCD4, B5CD, BC6D",,,,,,,A. B2C2D,B. BC3D,C. B2C3D,D. BCD7,B. BC3D,,,"Because the letters are the same, concentrate on the number series, which is a simple 2, 3, 4, 5, 6 series, and follows each letter in order."
+" P5QR, P4QS, P3QT, _____, PQV",,,,,,,A. PQW,B. PQV2,C. P2QU,D. PQ3U,C. P2QU,,,"The first two letters, PQ, are static. The third letter is in alphabetical order, beginning with R. The number series is in descending order beginning with 5."
+"CMM, EOO, GQQ,  _____ , KUU",,,,,,,A. GRR,B. GSS,C. ISS,D. ITT,C. ISS,,,"The first letters are in alphabetical order with a letter skipped in between each segment: C, E, G, I, K. The second and third letters are repeated; they are also in order with a skipped letter: M, O, Q, S, U."
+" QAR, RAS, SAT, TAU, _____",,,,,,,A. UAV,B. UAT,C. TAS,D. TAT,A. UAV,,,"In this series, the third letter is repeated as the first letter of the next segment. The middle letter, A, remains static. The third letters are in alphabetical order, beginning with R."
+". DEF, DEF2, DE2F2, _____, D2E2F3",,,,,,,A. DEF3,B. D3EF3,C. D2E3F,D. D2E2F2,D. D2E2F2,,,"In this series, the letters remain the same: DEF. The subscript numbers follow this series: 1,1,1; 1,1,2; 1,2,2; 2,2,2; 2,2,3."
+"SCD, TEF, UGH, ____, WKL",,,,,,,A. CMN,B. UJI,C. VIJ,D. IJT,C. VIJ,,,"There are two alphabetical series here. The first series is with the first letters only: STUVW. The second series involves the remaining letters: CD, EF, GH, IJ, KL."
+" FAG, GAF, HAI, IAH, ____",,,,,,,A. JAK,B. HAL,C. JAI,D. HAK,A. JAK,,,"The middle letters are static, so concentrate on the first and third letters. The series involves an alphabetical order with a reversal of the letters. The first letters are in alphabetical order: F, G, H, I, J. The second and fourth segments are reversals of the first and third segments. The missing segment begins with a new letter.
+
+"
+". BCB, DED, FGF, HIH, ___",,,,,,,A. JKJ,B. HJH,C. IJI,D. JHJ,A. JKJ,,,"This series consists of a simple alphabetical order with the first two letters of all segments: B, C, D, E, F, G, H, I, J, K. The third letter of each segment is a repetition of the first letter."
+" ZA5, Y4B, XC6, W3D _____",,,,,,,A. E7V,B. V2E,C. VE5,D. VE7,D. VE7,,,"There are three series to look for here. The first letters are alphabetical in reverse: Z, Y, X, W, V. The second letters are in alphabetical order, beginning with A. The number series is as follows: 5, 4, 6, 3, 7."
+"E, A __, O, I",,,,,,,A. E,B. U,C. X,D. V,B. U,,,"The given series consists of vowels in decreasing order, starting with E. Hence, the missing letter is U."
+" D, F, G, H, J, K, L, M, N, __",,,,,,,A. O,B. Q,C. P,D. R,C. P,,,"D, F, G, H, J, K, L, M, N, __
+
+The given series consists of consonants in increasing order, starting with D.
+The next consonant in the series is P.
+"
+" E, J, O, T, Y, __",,,,,,,A. D,B. Z,C. C,D. E,A. D,,,"E+5, J+5, O+5, T+5, Y+5, __
+
+The next letter in the series is Y + 5 = D."
+"G, J, N, Q, U, __",,,,,,,A. W,B. X,C. Y,D. Z,B. X,,,"G+3, J+4, N+3, Q+4, U+3, __
+
+The next letter in the series is U + 3 = X."
+" R, K, F, C, __",,,,,,,A. Z,B. Y,C. W,D. A,D. A,,,"R-7, K-5, F-3, C, __
+
+The values that are subtracted are consecutive prime numbers in decreasing order.
+Hence, the next letter in the series is C - 2 = A.
+"
+" BY, CX, EV, GT, KP, __",,,,,,,A. JQ,B. MN,C. PK,D. LO,B. MN,,,"BY, CX, EV, GT, KP, __
+
+The given series is a mixed series. The letters B, C, G and K are the letters in prime value positions. Hence, the next letter is M. The second letter in each group form an opposite pair of the first letter in that group. Hence, the next pair in the series is MN.
+"
+" AI, EO, IU, __, UE",,,,,,,A. OU,B. OI,C. UA,D. OA,D. OA,,,"AI, EO, IU, __, UE
+
+The first letters in all the groups are consecutive vowels starting with A. The second letters in all the groups are consecutive vowels starting with I. Hence the missing pair is OA.
+"
+" AP, BQ, CR, DS, __",,,,,,,A. ET,B. EU,C. TE,D. EV,A. ET,,,"AP, BQ, CR, DS, __
+
+The first letters in all the pairs, i.e, A, B, C and D form a series of consecutive letters. Similarly, the second letters P, Q, R and S form another pair of consecutive letters. Hence, the next pair in the series is ET."
+" QN, RP, TS, WW, __, FH",,,,,,,A. AC,B. XB,C. AB,D. YC,C. AB,,,"The given series is a mixed series.
+
+Pattern for the first letters:
+Q+1, R+2, T+3, W+4, A+5, F
+Pattern for the second letters:
+N+2, P+3, S+4, W+5, B+6, H
+Hence, the missing pair is AB."
+" EA, IE, OK, SO, YU, __
+",,,,,,,A. WX,C. YD,D. ZX,E. CY,E. CY,,,"The given series is a mixed series. Pattern for the first letters:
+
+E+4, I+6, O+4, S+6, Y+4, C
+Pattern for the second letters:
+A+4, E+6, K+4, O+6, U+4, Y
+Hence, the next pair in series is CY."
+"KPD, LOE, MNF, NMG, __",,,,,,,A. ONF,B. OLH,C. MLH,D. MNH,B. OLH,,,"The given series is a mixed series.
+
+Pattern for the first letter:
+K+1, L+1, M+1, N+1, O
+Pattern for the second letter:
+P-1, O-1, N-1, M-1, L
+Pattern for the third letters:
+D+1, E+1, F+1, G+1, H
+Hence, the next group in the series is OLH."
+" BEP, CIQ, DOR, FUS, GAT, __",,,,,,,A. HEV,B. HIT,C. IET,D. IEU,A. HEV,,,"The given series is a mixed series.
+
+Pattern for the first letter:
+Consecutive consonants starting with B. Next letter in that series is H.
+Pattern for the second letter: Consecutive vowels starting with E. The next letter in that series is E. Pattern for the third letter: Consecutive consonants starting with V.
+Hence, the next group in the series is HEV."
+"GKF, IPC, LTY, PWT, UYN, __",,,,,,,A. ABZ,B. XBX,C. XAH,D. AZG,D. AZG,,,"The given series is a mixed series. Pattern for the first letter:
+
+G+2, I+3, L+4, p+5, U+6, A
+Pattern for the second letter:
+K+5, P+4, T+3, W+2, Y+1, Z
+Pattern for the third letter:
+F-3, C-4, Y-5, T-6, N-7, G"
+"QLR, JPD, RNU, GNC, SPX, DLB, __",,,,,,,A. ARE,C. BTU,D. KJE,E. TRA,E. TRA,,,"The alternate groups are in different series.
+
+QLR, RNU, SPX are in one series. Pattern for the first letter:
+Q+1, R+1, S+1, T
+Pattern for the second letter:
+L+2, N+2, P+2, R
+Pattern for the third letter:
+R+3, U+3, X+3, A
+Hence, the next group in the series is TRA.
+"
+" PKC, SPF, XSK, AXN, __, IFV",,,,,,,A. CAQ,B. FCS,C. FAS,D. CFS,C. FAS,,,"The given series is a mixed series. Pattern for the first letter:
+
+P+3, S+5, X+3, A+5, F+3, I
+Pattern for the second letter:
+K+5, P+3, S+5, X+3, A+5, F
+Pattern for the third letter:
+C+3, F+5, K+3, N+5, S+3, V
+Hence, the missing grOUP is FAS."
+"GTB, CYV, YDP, __, QND",,,,,,,A. DIV,B. UIJ,C. DDV,D. UVV,B. UIJ,,,"The given series is a mixed series. Pattern for the first letter:
+
+G-4, C-4, Y-4, U-4, Q
+Pattern for the second letter:
+T+5, Y+5, D+5, I+5, N
+Pattern for the third letter:
+B-6, V-6, P-6, J-6, D
+Hence, the missing group is UIJ.
+"
+" JTU, __, UCF, BFM, JHU",,,,,,,A. OYZ,B. JCZ,C. OCF,D. JCZ,A. OYZ,,,"The given series is a mixed series. Pattern for the first letter:
+
+J+5, O+6, U+7, B+8, J
+Pattern for the second letter:
+T+5, Y+4, C+3, F+2, H
+Pattern for the third letter:
+U+5, Z+6, F+7, M+8, U
+Hence, the missing group in OYZ"
+" ABDH, BDHP, CFLX, DHPF, __",,,,,,,A. EKNT,B. TNEK,C. EJTN,D. JNTE,C. EJTN,,,"This question can be solved easily if the relation between the letters within the group is observed. In this series the first letter in all the groups form a series of consecutive letters. Hence, the first letter in the next group is E. The other letters in each group are related as follows. A*2, B*2, D*2, H
+
+B*2, D*2, H*2, P
+C*2, F*2, L*2, X
+D*2, H*2, P*2, F
+Hence, the next group is obtained as follows.
+E*2, J*2, T*2, N.
+Hence, the next group in the series is EJTN."

@@ -1,0 +1,31 @@
+Question,Option 1,Option 2,Option 3,Option 4,Answer,Solution,Sub_id,Q_id
+ 1: 3 = 1 2/3: x. The value of x is?,1,3,4 1/6,5,4,X * 1 = 3 * 5/3  :::  x = 5,APTRAPENL,RAPENL001
+What number has a 5:1 ratio to the number 10?,42,50,55,62,2,5:1 = x: 10  :::   x = 50,APTRAPENL,RAPENL002
+" If a: b = 7: 5, b: c = 9: 11, find a: b: c?",63:14:55,63:45:55,14:14:15, 7: 14: 15,2,a: b = 7: 5  b: c = 9: 11 :::    a: b: c = 63: 45: 55,APTRAPENL,RAPENL003
+" If a: b = 3:4, b:c = 7:9, c:d = 5:7, find a:d?", 5:12,07:12,03:11,05:11,1,a/d = (3/4)*(7/9)*(5/7) :::  => 5/12,APTRAPENL,RAPENL004
+ The inverse ratio of 3: 2: 1 is?,01:02:03,02:03:01, 3:1:2, 2:3:6,4,1/3: 1/2: 1/1 = 2:3:6,APTRAPENL,RAPENL005
+The duplicate ratio of 3:4 is?,04:03,06:08, 9:16,03:04,3,32: 42 = 9:16,APTRAPENL,RAPENL006
+The triplicate ratio of 1:2 is?, 8:1,01:08,02:01,01:02,2,13: 23 = 1:8,APTRAPENL,RAPENL007
+The sub-duplicate ratio of 1:4 is,01:02, 2:1,01:03,01:04,1,,APTRAPENL,RAPENL008
+"The greatest ratio out of 2:3, 5:4, 3:2 and 4:5 is?",04:05,03:02, 5:4,02:03,2,NA,APTRAPENL,RAPENL009
+" The smallest ratio out of 1:1, 2:1, 1:3 and 3:1 is?", 3:1,01:03,02:01,01:02,2,NA,APTRAPENL,RAPENL010
+The third proportional to 1 and 2 is?,2,3,4,1,3,(2*2)/1 = 4,APTRAPENL,RAPENL011
+"The fourth proportional to 12, 14 and 18 is?",21,20,22,27/Jan,1,(14*18)/12 = 21,APTRAPENL,RAPENL012
+. The mean proportional between 4 and 9 is?,9,3,4,6,4,,APTRAPENL,RAPENL013
+The proportion of copper and zinc in the brass is 13:7. How much zinc will there be in 100 kg of brass?,20 kg,35kg,55kg,14kg,2,7/20 * 100 = 35,APTRAPENL,RAPENL014
+ The ratio of two numbers is 2:3 and the sum of their cubes is 945. The difference of number is?,3,4,5,6,1,2x   3x  8x cube + 27x cube = 945  :::  35x cube = 945  :::   x cube = 27 => x = 3,APTRAPENL,RAPENL015
+"The first three terms of a proportion are 3, 9 and 12. The fourth term is?",4,6,18,36,4,(9*12)/3 = 36,APTRAPENL,RAPENL016
+"A 70 cm long wire is to be cut into two pieces so that one piece will be 2/5th of the other, how many centimeters will the shorter piece be?",10cm,20cm,25cm,30cm,2,1: 2/5 = 5: 2 :::    2/7 * 70 = 20,APTRAPENL,RAPENL017
+96 is divided into two parts in such a way that seventh part of first and ninth part of second are equal. Find the smallest part?,38,40,42,48,3,x/7 = y/9 => x:y = 7:9  :::  7/16 * 96 = 42,APTRAPENL,RAPENL018
+" 1000 men have provisions for 15 days. If 200 more men join them, for how many days will the provisions last now?",10.5,11.5,12.5,10.4,3,1000*15 = 1200*x  :::    x = 12.5,APTRAPENL,RAPENL019
+"A sun is divided among X, Y and Z in such a way that for each rupee X gets, Y gets 45 paisa and Z gets 30 paisa. If the share of Y is RS. 27, what is the total amount?",Rs.90,105,96,120,2,x:y:z = 100:45:30 :::   35 --- ? => 105,APTRAPENL,RAPENL020
+"Rs.160 contained in a box consists of one rupee, 50 paisa and 25 paisa coins in the ratio 4:5:6. What is the number of 25 paisa coins?",100,115,120,110,3,400x + 350x + 150x = 16000 :::   x = 20  6x = 120,APTRAPENL,RAPENL021
+. If A:B = 1/2: 1/3 B:C = 1/2:1/3 then A:B:C?,02:03:03,01:02:06,1/6:1/2:1/3,09:06:04,4,  A:B = 1/2:1/3 = 3:2  :::    B:C = 1/2:1/3 = 3:2   :::   A:B:C = 9:6:4  ,APTRAPENL,RAPENL022
+"Divide Rs. 1500 among A, B and C so that A receives 1/3 as much as B and C together and B receives 2/3 as A and C together. A's share is?", Rs.600,525,375,0,3,A = 1/3(B+C); :::   B = 2/3(A+C) :::   A/(B+C) = 1/3 :::    A = 1/4 * 1500 => 375,APTRAPENL,RAPENL023
+"Rs.1170 is divided so that 4 times the first share, thrice the 2nd share and twice the third share amount to the same. What is the value of the third share?",Rs.260,270,360,540,4,4A = 3B = 2C = x :::   A:B:C = 1/4:1/3:1/2 = 3:4:6 :::   6/13 * 1170 = Rs.540,APTRAPENL,RAPENL024
+"A, B and C have Rs.500 between them, A and C together have Rs.200 and B and C Rs.350. How much does C have?",Rs.50,75,100,150,1,  A+B+2C = 550    :::    A+B+C  =  500   :::     C = 50 ,APTRAPENL,RAPENL025
+" In a bag there are coins of 50 paisa, 25 paisa and one rupee in the proportion 5:6:2. If there are in all Rs.42, the number of 25 paisa coins is?",32,42,52,60,2,250x + 150x + 200x = 4200  :::  600x = 4200  :::   x = 7 => 6x = 42,APTRAPENL,RAPENL026
+"In a mixture of 60 liters, the ratio of milk and water is 2:1. What amount of water must be added to make the ratio of milk and water as 1:2?",42 liters,56,60,77,3,2:1 --- 60  1:2    2:4  :::    3 ----6   :::     3 ----------- ? :::   => 60 liters,APTRAPENL,RAPENL027
+" 1600 men have provisions for 28 days in the temple. If after 4 days, 400 men leave the temple, how long will the food last now?",28 days,30,32,35,3,1600 ---- 28 days  1600 ---- 24  1200 ---- ?  :::   1600*24 = 1200*x   :::    x = 32 days ,APTRAPENL,RAPENL028
+There is food for 760 men for 22 days. How many more men should join after two days so that the same food may last for 19 days more?,60 men,40,25,20,2,  x*19 = 760*20    x = 800         :::      760               40,APTRAPENL,RAPENL029
+"Rs.590 is divided amongst A, B, C so that 5 times A's share, six times B's share and eight times C's share are all equal. Find C's share?",Rs.130,Rs.150,Rs.170,Rs.175,2,A+B+C = 590 :::     5A = 6B = 8C = x  :::    A:B:C = 1/5:1/6:1/8     = 24:20:15  :::  15/59 * 590 = Rs.150,APTRAPENL,RAPENL030

@@ -1,0 +1,124 @@
+{% extends '/admin/admin_base.html' %}
+
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+    
+  <style>
+  a:link {
+        text-decoration: none;
+      }
+    .input-btn
+        {
+            margin-top: 20px;
+            padding:6px;
+        }
+
+    .buttn
+    {
+        font-weight: bold;
+        width: 50%;
+        text-align: center;
+        font-size:20px;
+       
+    }
+
+    .edit_buttn
+    {
+        background-color: rgb(34, 142, 236);
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size:16px;       
+    }
+
+    .edit_buttn:hover
+    {
+        background-color: rgb(8, 102, 185);
+        color: white;
+    }
+    
+    .edit_buttnn
+    {
+        background-color: rgb(235, 134, 18);
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size:16px;       
+    }
+    
+    .edit_buttnn:hover
+    {
+        background-color:rgb(177, 98, 8);
+        color: white;
+    }
+
+
+    
+  </style>
+</head>
+<div class="container">
+<center>
+    <div class="cards">
+      
+        <div class="table-responsive">
+            <table class="table center table-bordered"  style="color: white;">
+                
+                <tbody>
+                    <tr>
+                        <th >ID</th>
+                        <th>{{ admin_details[0] }}</th>
+                    </tr>
+                    <tr>
+                                
+                        <th >Full Name</th>
+                        <th>{{ admin_details[1] }}</th>
+                    </tr>
+                    <tr>
+                                
+                        <th >Mobile</th>
+                        <th>+91 {{ admin_details[2] }}</th>
+                    </tr>
+                    <tr >
+                                
+                        <th >Email</th>
+                        <th>{{ admin_details[3] }}</th>
+                    </tr>
+                    <tr>
+                               
+                        <th style="font-weight: bold;">Password</th>
+                        <th>****************</th>
+                    </tr>
+                    <tr>
+                        <th>Action</th>
+                        <th><a  href="{{ url_for('account_edit')}}" ><button class="btn edit_buttn"  name="edit_btn" type="submit">Edit details</button></a></th>
+                    </tr> 
+                    <tr>
+                        <!--th>Change Password</th>
+                        <th><a  href="#" target="_blank"><button class="btn edit_buttnn"  name="edit_btn" type="submit">Send OTP</button></a></th-->
+                        
+                        {% if OTP %}
+                        <th><table>
+                            <tr>
+                                <th>sahdfj</th>
+                                <th>sjfh</th>
+                            </tr>
+                        </table></th>
+                        {% endif %}
+                    </tr>
+                    
+                </tbody>
+            </table>
+    
+        </div>
+    </div>
+</center>
+</div>
+{% endblock content %}

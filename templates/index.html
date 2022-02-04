@@ -1,0 +1,85 @@
+{% extends 'index_base.html' %}
+{% block content %}
+<head>
+    <style>
+        body{
+            
+            background-image: url('../static/image/test_bg.jpg');
+            height:fit-content ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0px 0px 15px rgb(203, 226, 203);
+            
+        }
+        .card1{
+          
+            padding: 100px;
+            width: 100%;
+            
+        }
+        .card1 h1
+        {
+            animation: type 3s steps(22);
+            overflow:hidden;
+            white-space: nowrap;
+            font-style:inherit;
+            color:white;
+            text-indent: 40px;
+            animation-iteration-count:infinite;
+            animation-delay: 1s;
+            -moz-animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            margin-bottom: 24px;
+        }
+
+        @keyframes type
+        {
+            0%
+            {
+                width:0%;
+            }
+            100%
+            {
+                width:100%;
+            }
+        }
+      
+    </style>
+</head>
+<body> 
+    <div class="container-fulid card1">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="display-1" style="font-size:60px;">Welcome to <span style="color:rgb(11, 48, 211);">Mock Master</span>,</h1> 
+                <span style="font-size:22px;color:white;margin-left:46px;font-weight:bold;">Test practicing site </span>
+            </div>
+                <!-- <div class="col-lg-3">
+                    <img class="img-responsive" src="../static/image/test_logo2.png " alt="Test logo"> 
+               dfsdg
+            </div> -->
+        </div>
+        <hr/>
+        <div class="row" style="color: white;margin-top:40px;font-weight:bold;font-size:18px;margin-left:46px;margin-right:46px;">
+            <div class="col-lg-10">
+               
+                <p>We provide space to practice tests of your interested topics such as Aptitide, General Knowledge, History, etc..,</p>
+                <p> Provides you the graphical visualization for your performace for better understanding.</p>
+                <p>Practice unlimited tests as you can.</p>
+                <br/>
+                <p> <a href="{{ url_for('register')}}" style="text-decoration:underline;color:blue;">Register</a> and go practice as you can. </p>
+            </div>
+
+        </div>
+        
+        
+    </div> 
+ 
+ 
+
+
+{% include "index_footer.html" %}
+</body>
+{% endblock content %}
+

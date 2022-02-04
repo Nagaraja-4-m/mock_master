@@ -1,0 +1,14 @@
+use quiz
+
+db.createCollection('users')
+
+
+db.users.insert({"user_id":"21AA001","user_fname":"Nani",
+    "user_lname":"Shankar","user_gender":"Male","user_email":"nplk321@gmail.com",
+        "user_password":"ABCDefgh1234"})
+
+db.createCollection("subjects")
+db.subjects.insert({"subject_id":"21NUM","subject_name":"Number",
+    "questions":""})
+
+        

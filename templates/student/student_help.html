@@ -1,0 +1,105 @@
+{% extends '/student/student_base.html' %}
+{% block content %}
+
+<head>
+
+    <style>
+        .cards{
+   border: 10px;
+   background-color: white;
+   padding: 28px;
+   width:100%;
+   height:25%;
+   margin: 10px;
+   border-radius: 26px;
+   box-shadow: 6px 2px;
+ }
+ .cards-title
+ {
+     text-align: center;
+     margin-top: -20px;
+     text-transform: uppercase;
+     letter-spacing: 7px;
+ }
+
+ body
+ {
+   background-color: rgba(227, 232, 236, 0.979);
+   font-family: Georgia, serif;
+ }
+
+ a:link {
+        text-decoration: none;
+      }
+
+    .input_field
+    {
+        margin-bottom: 16px;
+        width:100%;
+    }
+    .input_field:hover
+    {
+        font-size:18px;
+        border-color:black;
+        border-width: 3px;
+
+    }
+    .input_field::after
+    {
+
+        border-color:black;
+     
+
+    }
+ </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-12">
+        <div class="cards">
+            <h2 class="cards-title" style="margin-bottom: 40px;margin-top: 10px;">Ask your queries</h2>
+            <p style="color:rgb(11, 36, 27);font-weight: bolder;  margin-top: 20px; font-size:large;text-align:  center;"> {{ status }}</p>
+            <div class="form">
+                <form action="{{ url_for('student_help') }}" autocomplete="off" method="POST">
+                    <input type="text" class="form-control  input_field" name="subject" placeholder="Subject" required>
+                    <textarea type="text" class="form-control input_field" name="query" placeholder="Write your query in detail"  rows="10" required></textarea>
+                     <a href="{{ url_for('student_help') }}"><button type="submit" class="btn btn-info  button"  style="font-weight: bolder; width: 40%; border-radius: 5px; color: black;">ASK QUERY</button></th></a>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!--div class="col-lg-6">
+            <div class="cards">
+                <h2 class="cards-title" style="margin-bottom: 40px;margin-top: 10px;">View replays</h2>
+    
+                <div class="form">
+                    <form >
+                        {% if replay | length >0 %}
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <select class="form-select" style="width:100%;  font-weight: bold;" name="subject_name" required>
+                                     <option>Select query</option>
+                                          {% for i in replay %}
+                                              <option  value="{% set selected_qry = i[2] %}">{{ i[2] }}</option>
+                                          {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-info btn-sm"  style=" width: 100%; border-radius: 5px; color: black;">View</button>
+                            </div>
+                         </div>
+                        <textarea type="text" class="form-control input_field" name="help_body" placeholder="Write your query in detail"  rows="10" readonly>Query:{{selected_qry}}</textarea>
+                        <a href="{{ url_for('student_profile_edit')}}"> <button type="submit" class="btn btn-info  button"  style="font-weight: bolder; width: 40%; border-radius: 5px; color: black;">SEND QUERY</button></a></th>
+                    </form>
+                    {% elif replay | length ==0 %}
+                        No queries asked yet.
+                    {% endif %}
+                </div>
+                </div>
+            </div-->
+        </div>
+    </div>
+</body>
+{% endblock content %}

@@ -1,0 +1,33 @@
+Questions,Option 1,Option 2,Option 3,option 4,Answer,Solution,sub_id,q_id
+ The average of first 10 even numbers is?,18,22,9,11,4,Sum of 10 even numbers = 10 * 11 = 11,APTAVGENL,AVGENL001
+The average of 11 numbers is 10.9. If the average of first six is 10.5 and that of the last six is 11.4 the sixth number is?,11,11.3,11.4,11.5,4,6 to 11 = 6 * 11.4 = 68.4  63 + 68.4 = 131.4 “ 119.9 = 11.5 :::  6th number = 11.5,APTAVGENL,AVGENL002
+The average of first ten prime numbers which are odd is?,12.9,13.8,17,15.8,4,Sum of first 10 prime no. which are odd = 158   :::  Average = 158/10 = 15.8,APTAVGENL,AVGENL003
+ The average of first 10 natural numbers is?,5,5.5,6.5,6,2,Sum of 10 natural no. = 110/2 = 55 :::   Average = 55/10 = 5.5,APTAVGENL,AVGENL004
+The average of first 10 odd numbers is?,11,10,17,9,2,Sum of 10 odd no. = 100 :::  Average = 100/10 = 10,APTAVGENL,AVGENL005
+The average of first 10 prime numbers is?,10,12.5,12.9,15.5,2,"Sum of 10 prime no. = 129    
+Average = 129/10 = 12.9",APTAVGENL,AVGENL006
+The average age of three boys is 15 years and their ages are in proportion 3:5:7. What is the age in years of the youngest boy?,15,9,18,21,2,3x + 5x + 7x = 45 :::  x =3   3x = 9,APTAVGENL,AVGENL007
+The average of 1st 3 of 4 numbers is 16 and of the last 3 are 15. If the sum of the first and the last number is 13. What is the last numbers?,8,6,5,2,3,A + B + C = 48 :::   B + C + D = 45 :::  A + D = 13 :::  2D = 10    D = 5 ,APTAVGENL,AVGENL008
+" The average of 9 observations was 9, that of the 1st of 5 being 10 and that of the last 5 being 8. What was the 5th observation?",9,8,7,6,1,"5 to 9 = 5 * 8 = 40  :::  5th = 50 + 40 = 90 “ 81 = 9  
+",APTAVGENL,AVGENL009
+The average of first five prime numbers greater than 20 is?,31,31.01,32,32.2,4,23 + 29 + 31 + 37 + 41 = 161/5 = 32.2,APTAVGENL,AVGENL010
+ The average age of 8 men increases by 2 years when two women are included in place of two men of ages 20 and 24 years. Find the average age of the women?,36 years,24,30,18,3,20 + 24 + 8 * 2 = 60/2 = 30,APTAVGENL,AVGENL011
+A batsman in his 17th innings makes a score of 85 and their by increasing his average by 3. What is his average after the 17thinnings?,34,35,36,37,4,16x + 85 = 17(x + 3)  :::   x = 34 + 3 = 37,APTAVGENL,AVGENL012
+The average of five results is 46 and that of the first four is 45. The fifth result is?,1,10,12.5,50,4,5 * 46 “ 4 * 45 = 50,APTAVGENL,AVGENL013
+"The average of 11 results is 50, if the average of first six results is 49 and that of the last six is 52. Find the sixth result?",46,56,34,57,2,1 to 11 = 11 * 50 = 550  :::  1 to 6 = 6 * 49 = 2946   to 11 = 6 * 52 = 3126th = 294 + 312 “ :::550 = 56,APTAVGENL,AVGENL014
+. Find the average of the first 20 natural numbers?,10,11.5,12,10.5,4,Average of the first 'n' natural numbers = (n + 1)/2   :::    We get (20 + 1)/2 = 10.5,APTAVGENL,AVGENL015
+The average of 13 numbers is 60. Average of the first 7 of them is 57 and that of the last 7 is 61. Find the 8th number?,46,32,68,31,1," 13 * 60 = 780    7 * 57 = 399   7 * 61 = 427    ::: So, the 8th number = 427 + 399 - 780 = 46.",APTAVGENL,AVGENL016
+ A batsman makes a score of 64 runs in the 16th innings and thus increased his average by 3. Find his average after the 16th inning?,17,29,18,19,4,"So, the average after the 15th inning will be (P-3) ::: Hence, 15(P-30) + 64 = 16P => P = 19.",APTAVGENL,AVGENL017
+ The average marks of a class of 30 students is 40 and that of another class of 50 students is 60. Find the average marks of all the students?,50,47.5,59,52.5,4,Average marks of all the students = 4200/80 = 52.5,APTAVGENL,AVGENL018
+"The average of 35 numbers is 25. If each number is multiplied by 5, find the new average?",125,134,170,98,1,"35 * 25 = 875  :::  Thus, the new average = 25 * 5 = 125.",APTAVGENL,AVGENL019
+"The average of 10 numbers is 23. If each number is increased by 4, what will the new average be?",22,27,25,29,2,4 * 10 = 40:::  The new sum = 230 + 40 = 270 :::The new average = 270/10 = 27.,APTAVGENL,AVGENL020
+"The average of the marks of 12 students in a class is 36. If the marks of each student are doubled, find the new average?",72,45,37,79,1,"12 students = 12 * 36 = 432  :::  The new sum = 432 * 2 = 864.::: So, the new average = 864/12 = 72.",APTAVGENL,AVGENL021
+" Find the average of the series : 312, 162, 132, 142 and 122?",194,175,162,196,5,Average = (312 + 162 + 132 + 142 + 122)/5 = 870/5 = 174,APTAVGENL,AVGENL022
+The sum of five numbers is 655. The average of the first two numbers is 85 and the third number is 125. Find the average of the two numbers?,180,170,190,175,1,(P + Q)/2 = 85 and R = 125   ::: P + Q = 170 and R = 125   P + Q + R = 295 ::: S + T = 655 - (P + Q + R) = 360 ::: (S + T)/2 = 180.,APTAVGENL,AVGENL023
+Rahim bought 65 books for Rs.1150 from one shop and 50 books for Rs.920 from another. What is the average price he paid per book ?,Rs.20,18,22,16,2,Average price per book = (1150 + 920) / (65 + 50) = 2070 / 115 = Rs.18,APTAVGENL,AVGENL024
+"Dacid obtained 76, 65, 82, 67 and 85 marks (out of 100) in English, Mathematics, Physics, Chemistry and Biology. What are his average marks?",65,69,72,76,5,Average = (76 + 65 + 82 + 67 + 85)/5 = 375/5 = 75.,APTAVGENL,AVGENL025
+"The average of 20 numbers is zero. Of them, at the most, how many may be greater than zero?",0,1,10,19,4,Sum of 20 numbers = (0 * 20) = 0   is (-a).,APTAVGENL,AVGENL026
+Find the average of all the numbers between 6 and 34 which are divisible by 5.,18,20,24,30,2,Average = (10 + 15 + 20 + 25 + 30)/5 = 100/5 = 20.,APTAVGENL,AVGENL027
+The average of first five multiples of 3 is:,3,9,12,15,2,Average = 3(1 + 2 + 3 + 4 + 5)/5 = 45/5 = 9.,APTAVGENL,AVGENL028
+" The average of the two-digit numbers, which remain the same when the digits interchange their positions, is:",33,44,55,66,3,[(4 * 110) + 55]/9 = 495/9 = 55.,APTAVGENL,AVGENL029
+The average of non-zero number and its square is 5 times the number. The number is:,9,17,29,295,1,"(x + x2)/2 = 5x => x2 - 9x = 0   ::: => x(x - 9) = 0  ::: => x = 0 or x = 9  :::  So, the number is 9.",APTAVGENL,AVGENL030

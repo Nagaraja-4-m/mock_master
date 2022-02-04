@@ -1,0 +1,139 @@
+{% extends '/admin/admin_base.html' %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+</head>
+
+<style>
+    .table_content
+    {
+        border-radius: 20px;
+    }
+    .edit_buttn
+    {
+        background-color: rgb(34, 142, 236);
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size:16px;       
+    }
+    .delete_buttn
+    {
+        background-color: rgb(238, 16, 9);
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size:16px;       
+    }
+    .delete_buttn:hover
+    {
+        background-color: rgb(156, 15, 10);   
+        color: white;
+    }
+    .edit_buttn:hover
+    {
+        background-color: rgb(8, 102, 185);
+        color: white;
+    }
+    .selectArea
+    {
+        width:100%;
+    }
+
+    .buttn
+    {
+        font-weight: bold;
+        width: 50%;
+        text-align: center;
+        font-size:18px;
+       
+    }
+
+</style>
+
+<!-- display subject details -->
+<br/>
+
+{% if std_det %}
+<!-- quetions display area -->
+<div class="container ">
+    <div class="table-responsive"> 
+        <table class="table table-hover table_content  ">
+            <thead>
+                <tr class="active" >
+                    <th>Sl.no</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Mobile number</th>
+                    <th>Email ID</th>
+                    <th>Participation</th>
+                    <th style="padding-left: 52px;">Action</th>
+                </tr>
+            </thead>
+            {% set count=0 %}
+            <tbody  class="table-bordered" >
+                {% for i in std_det %}
+                    <tr class="mytable">
+                        {%  set count=loop.index %}
+                        <th>{{count}}</th>
+            
+                        <th>{{i[0] }}</th>
+                        <th>{{i[1] }}</th>
+                        <th>{{i[2] }}</th>
+                        <th>{{i[3] }}</th>
+            <!--th>
+                        {% if i[4]!=None %}                  
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Subject</th>
+                                        <th>Result</th>
+                                    </tr>
+                                </thead>
+                            {% for k in i[4].split(':::') %}
+                                <tr>
+                                    {{k}}
+                                    {% set m= k.split(',') %}
+                                     
+                                     <th>{{m[0]}}</th>
+                                        
+                                </tr>
+                            {% endfor %}
+                            </table>
+                            {% elif i[4]==None %}
+                             <p> No Participations yet.</p>
+                        {% endif %}
+                    </th-->
+<!-- need action -->
+                    <th><a  href="{{ url_for('student_performances',sid=i[3])}}"><button type="submit" class="btn btn-warning"  name="view_btn"  style="font-weight:bold;">View</button></a></th>
+                        <th>
+                            <table>
+                                <tr>
+                                    <th> <a  href="{{ url_for('student_email',u_email=i[3])}}" ><button class="btn edit_buttn"  name="edit_btn" type="submit">Send Email</button></a></th>
+                                </tr>
+                            </table>
+                        </th>
+
+<!-- need action -->
+                    </tr>
+
+                {% endfor %}   
+                            
+
+            </tbody>
+        </table>
+</div>
+</div>
+{% endif %}
+
+<!-- display subject details -->
+
+{% endblock content %}

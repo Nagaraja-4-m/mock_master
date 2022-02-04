@@ -1,0 +1,68 @@
+<head>
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    .drop
+    {
+        position:absolute;
+        right:0;
+        margin: 20px;
+        transition: 0.3s ease;
+        
+    }
+    
+    .sub-menu
+    {
+        display: none;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $(".sub-btn").click(function()
+        {
+            $(this).next(".sub-menu").slideToggle();
+
+        });
+    });
+</script>
+
+<body>
+    <div class="container">
+        <a href="#" class="sub-btn"><i class="fas fa-book"></i><span>Subjects</span><i class=" fas fa-angle-right d drop"></i></a>
+        <div class="sub-menu">
+            <a href="#" class="sub-item">Sub item 1</a>
+            <a href="#" class="sub-item">Sub item 1</a>
+            <a href="#" class="sub-item">Sub item 1</a>
+            <a href="#" class="sub-item">Sub item 1</a>
+        </div>
+
+       
+    </div>
+    
+</body>
+
+
+
+
+
+
+
+
+{% if admin_details %}
+        <form action="#" method="POST" >
+                    <div class="form-group ">
+                       <input type="text" class="form-control input-lg input_field" name="admin_id" value="{{ admin_details[0] }}"  placeholder="Admin ID" autocomplete="off" disabled/>
+                      <input type="text" class="form-control input-lg input_field" name="admin_name" value="{{ admin_details[1] }}"  placeholder="Full Name" autocomplete="off" required/>
+                      <input type="text" class="form-control input-lg input_field" name="admin_mobile" value="{{ admin_details[2] }}"  placeholder="Mobile Number" autocomplete="off" required/>
+                      <input type="email" class="form-control input-lg input_field" name="admin_email"  value="{{ admin_details[3] }}" placeholder="Email Address" autocomplete="off" required/>
+                      <div class=" input-btn">
+                          <button class="btn btn-success btn-lg buttn"  name="add_btn" type="submit">UPDATE DETAILS</button>
+                  </div>
+                </div>
+        </form>
+    {% endif %}

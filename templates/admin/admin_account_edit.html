@@ -1,0 +1,93 @@
+{% extends '/admin/admin_base.html' %}
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+    
+  <style>
+  a:link {
+        text-decoration: none;
+      }
+    
+    .input_field
+    {
+        margin-top: 16px;
+        width:100%;
+        border-radius: 8px;
+
+    }
+    .input_field:hover
+    {
+        font-size:18px;
+        border-color:black;
+        border-width: 3px;
+
+    }
+    .input_field::after
+    {
+
+        border-color:black;
+     
+
+    }
+    .input-btn
+        {
+            margin-top: 14px;
+        }
+
+    .buttn
+    {
+        color: white;
+        font-weight: bold;
+        width: 50%;
+        text-align: center;
+        letter-spacing: 4px;
+        border-radius: 20px;
+       
+    }
+    .buttn:hover
+    {
+        
+        color: rgb(241, 234, 234);
+       
+    }
+
+
+
+   
+    
+  </style>
+</head>
+<div class="container">
+    <center>
+    <div class="cards">
+     <!-- input area -->
+     <div class="container pt-3">
+        <h2 class="cards-title">UPDATE DETAILS</h2>
+        <br/>
+        <p  style="color: rgb(255, 0, 191); text-align: center; font-weight: bold; font-size: 24px;">{{status}}</p>
+                    
+                {% if admin_details %}
+                <form action="{{ url_for('account_edit')}}" method="POST" >
+                        <div class="form-group ">
+                            <input type="text" class="form-control  input_field" name="admin_id" value="{{ admin_details[0] }}"  placeholder="Admin ID" autocomplete="off" disabled/>
+                            <input type="text" class="form-control  input_field" name="admin_name" value="{{ admin_details[1] }}"  placeholder="Full Name" autocomplete="off" required/>
+                            <input type="text" class="form-control  input_field" name="admin_mobile" value="{{ admin_details[2] }}"  placeholder="Mobile Number" autocomplete="off" required/>
+                            <input type="email" class="form-control  input_field" name="admin_email"  value="{{ admin_details[3] }}" placeholder="Email Address" autocomplete="off" required/>
+                            <div class=" input-btn">
+                                <button class="btn btn-success btn-lg buttn"  name="add_btn" type="submit">UPDATE DETAILS</button>
+                        </div>
+                    </div>
+                </form>
+                {% endif %}
+        <br/>
+    </div>
+    <!-- input area end -->
+<br><br><br>
+
+</div>
+</center>
+</div>
+{% endblock content %}

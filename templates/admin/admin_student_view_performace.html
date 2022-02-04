@@ -1,0 +1,126 @@
+{% extends '/admin/admin_base.html' %}
+{% block content %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+    
+
+   
+<style>
+    .cards:hover{
+        text-decoration: none;
+        font-size: medium;
+    }
+
+</style>
+
+</head>
+<body>
+
+
+    <!-- chart script  
+            <script type="text/javascript">
+            google.charts.load('current', {'packages':['corechart', 'bar']});
+            google.charts.setOnLoadCallback(drawStuff);
+            
+            function drawStuff() {
+
+                //var button = document.getElementById('change-chart');
+                var chartDiv = document.getElementById('chart_div');
+                var a=['Subject', 'Correct Answers', 'Total Questions'];
+                var x='{{user_test_data|safe}}'; 
+                //document.write(x);
+                var data = google.visualization.arrayToDataTable([['Subject', 'Correct Answers', 'Total Questions'],
+                '{{user_test_data|safe}}']);
+                
+                var materialOptions = {
+                width: 800,
+                height:400,
+                chart: {
+                    title: 'Subject wise performace',
+                    subtitle: ''
+                },
+                colors: ['#1ec971', '#3081d9'],
+                series: {
+                    0: { axis: 'Correct Answers' }, // Bind series 0 to an axis named 'distance'.
+                    1: { axis: 'brightness' } // Bind series 1 to an axis named 'brightness'.
+                },
+                axes: {
+                    y: {
+                    distance: {label: 'parsecs'}, // Left y-axis.
+                    brightness: {side: 'right', label: 'apparent magnitude'} // Right y-axis.
+                    }
+                }
+                };
+
+                var classicOptions = {
+                width: 900,
+                series: {
+                    0: {targetAxisIndex: 0},
+                    1: {targetAxisIndex: 1}
+                },
+                title: 'Subject wise performace',
+                vAxes: {
+                    // Adds titles to each axis.
+                    0: {title: 'parsecs'},
+                    1: {title: 'apparent magnitude'}
+                }
+                };
+
+                function drawMaterialChart() {
+                var materialChart = new google.charts.Bar(chartDiv);
+                materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
+                
+                }
+
+                drawMaterialChart();
+            };
+            </script>-->
+
+            <div class="container">
+                <div class="cards">
+                    <br/>
+                    <h3 class="cards-title">Performance</h3>
+                    <br/>
+                    {% if student_performace|length>0 %}
+                        <div class="table-responsive" style="color:white;">
+                            <table class="table"  style="color:white;" >
+                                <thead>
+                                    <tr>
+                                        <th>SUBJECT</th>
+                                        <th>OBTAINED MARKS</th>
+                                        <th>TOTAL MARKS</th>
+                                        <th>RESULT (in %)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for i in student_performace%}
+                                    <tr>
+                                        {% for j in i %}
+                                         <th>{{j}}</th>
+                                        {% endfor %}
+                                        <th>{{"{:.2f}".format((i[1] / i[2]) *100) }} </th>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                    {% elif student_performace| length<=0 %}
+
+                    <p style="color:white; text-align:center;"> No participations yet.</p>
+
+                    {% endif %}
+                  
+               </div>
+            </div>
+</body>
+{% endblock %}
