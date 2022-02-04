@@ -8,7 +8,7 @@ HOME:
 <img src="https://user-images.githubusercontent.com/89149882/152574099-62778a88-8096-4147-99b7-3250f0e9d6ab.png" width="384" height="180"/>
   <img src="https://user-images.githubusercontent.com/89149882/152575048-9454436e-2a13-4a1d-956f-b45c9ba2f17f.png" width="384" height="180"/>
   <img src="https://user-images.githubusercontent.com/89149882/152575062-56b581a3-5e66-47fd-b582-29fa130f32cb.png" width="384" height="180"/>
-  <img src="https://user-images.githubusercontent.com/89149882/152575160-37f3ad7c-1fb1-46e3-ada1-976a261bc84c.png" width="384" height="180"/>
+ <img src="https://user-images.githubusercontent.com/89149882/152576563-c6b76089-93a8-4ea2-9daf-60b5264c8fb3.png" width="384" height="180"/>
  
  <br/>
   STUDENT:
@@ -25,23 +25,12 @@ HOME:
  <br/>
   ADMIN:
   <br/>
-  <img src="" width="384" height="180"/>
-  <img src="" width="384" height="180"/>
-  <img src="" width="384" height="180"/>
-  <img src="" width="384" height="180"/>
-  <img src="" width="384" height="180"/>
-  <img src="" width="384" height="180"/>
-  <img src="" width="384" height="180"/>
-  <img src="" width="384" height="180"/>
-  <img src="" width="384" height="180"/>
-  <img src="" width="384" height="180"/>
+   <img src="https://user-images.githubusercontent.com/89149882/152575160-37f3ad7c-1fb1-46e3-ada1-976a261bc84c.png" width="384" height="180"/>
+  <img src="https://user-images.githubusercontent.com/89149882/152575145-7ac22d57-e49d-4115-b33f-9bde74e5a881.png" width="384" height="180"/>
+  <img src="https://user-images.githubusercontent.com/89149882/152575170-2d8c9b09-42f1-48c2-98e1-0985f7aee4b8.png" width="384" height="180"/>
+  <img src="https://user-images.githubusercontent.com/89149882/152575184-474546cb-a9a1-4395-9931-7871a8174f0f.png" width="384" height="180"/>
+  <img src="https://user-images.githubusercontent.com/89149882/152575175-f4cf6c15-6721-4ec7-bea6-47ef2b390237.png" width="384" height="180"/>
+  <img src="https://user-images.githubusercontent.com/89149882/152575154-53b27adb-3ccb-4494-bd1f-e5db61133a86.png" width="384" height="180"/>
+  <img src="https://user-images.githubusercontent.com/89149882/152575165-e0468818-a8d8-473f-8d6b-8bd2f9f73eab.png" width="384" height="180"/>
 </div>
-![admin subject view](https://user-images.githubusercontent.com/89149882/152575184-474546cb-a9a1-4395-9931-7871a8174f0f.png)
-![admin queries](https://user-images.githubusercontent.com/89149882/152575165-e0468818-a8d8-473f-8d6b-8bd2f9f73eab.png)
-![admin students](https://user-images.githubusercontent.com/89149882/152575170-2d8c9b09-42f1-48c2-98e1-0985f7aee4b8.png)
-![admin subject vie](https://user-images.githubusercontent.com/89149882/152575175-f4cf6c15-6721-4ec7-bea6-47ef2b390237.png)
 
-done
-
-![admin account](https://user-images.githubusercontent.com/89149882/152575145-7ac22d57-e49d-4115-b33f-9bde74e5a881.png)
-![admin add questions](https://user-images.githubusercontent.com/89149882/152575154-53b27adb-3ccb-4494-bd1f-e5db61133a86.png)
