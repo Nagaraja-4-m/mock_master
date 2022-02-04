@@ -12,7 +12,7 @@ REQUIREMENTS:
   <li>smtplib (install by PIP 'pip install secure-smtplib')</li>
   <li>Simple JSON (install using PIP 'pip install simplejson')</li>
   </ul>
-  <br/><br/>
+  <br/>
 Steps to run application:
 <ul>
 <li>Import and execute  'database.sql' file in mysql workbench</li>
