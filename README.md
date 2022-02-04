@@ -1,5 +1,24 @@
 # mock_master
 Mock master is a webapplication that provides service to  it’s users to take different types of quizzes like Aptitude, Logical reasoning, Communication ability, General Knowledge etc.., of their choice. User can access all of the quiz topics and can attempt any of them. For each questions there will be credit score. Results and progress will be showed graphically for better understand User can see the correct answer and solution for the same once completed the test. Also they are open to ask their doubts through help section. By this application user will come to know about their level or a grip on the topics and can improve in that topic as well and also they can expand their knowledge among the world. This application is most useful to practice test for the people who are preparing for competitive exams, CETs and Campus placements
+<br/>
+<br/>
+REQUIREMENTS:
+<br/>
+<ul>
+  <li>Python 3</li>
+  <li>MySQL</li>
+  <li>Flask (install by PIP 'pip install Flask')</li>
+  <li>MySQL db (install by PIP 'pip install mysqlclient')</li>
+  <li>smtplib (install by PIP 'pip install secure-smtplib')</li>
+  <li>Simple JSON (install using PIP 'pip install simplejson')</li>
+  </ul>
+  <br/><br/>
+Steps to run application:
+<ul>
+<li>Import and execute  'database.sql' file in mysql workbench</li>
+<li>[Optional] Run 'setup_admin.py'  to create admin account (login at 'localhost:5000/admin')</li>
+<li>Run 'main.py' file  (open at 'localhost:5000/')</li>
+</ul>
 
 SCREENSHOTS:
 <br/>
