@@ -5,7 +5,7 @@ SCREENSHOTS:
 <br/>
 Home:
 <div >
-<img src="https://user-images.githubusercontent.com/89149882/152574099-62778a88-8096-4147-99b7-3250f0e9d6ab.png" width="274" height="128"/>
+<img src="https://user-images.githubusercontent.com/89149882/152574099-62778a88-8096-4147-99b7-3250f0e9d6ab.png" width="320" height="152"/>
 
 </div>
 ![Home page])
