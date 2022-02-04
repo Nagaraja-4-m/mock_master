@@ -5,6 +5,6 @@ SCREENSHOTS:
 <br/>
 Home:
 <div >
-<img src="https://user-images.githubusercontent.com/89149882/149561782-9ce33de0-e1b9-4a6a-87bc-2116d2d039ab.png" width="192" height="90"/>
+<img src="https://user-images.githubusercontent.com/89149882/149561782-9ce33de0-e1b9-4a6a-87bc-2116d2d039ab.png" width="274" height="128"/>
 
 </div>
