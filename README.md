@@ -16,6 +16,7 @@ REQUIREMENTS:
 Steps to run application:
 <ul>
 <li>Import and execute  'database.sql' file in mysql workbench</li>
+ <li> Update 'username' and 'password' fields of conn object in 'setup_admin.py','accounts.py','admin.py' and 'students.py' files.</li>
 <li>[Optional] Run 'setup_admin.py'  to create admin account (login at 'localhost:5000/admin')</li>
 <li>Run 'main.py' file  (open at 'localhost:5000/')</li>
 </ul>
