@@ -1,0 +1,81 @@
+{% extends '/student/student_base.html' %}
+{% block content %}
+<style>
+
+  .cards{
+    border: 10px;
+    background-color: rgba(250, 249, 249, 0.904);
+    padding: 40px;
+    width:100%;
+    height:25%;
+    margin: 20px;
+    border-radius: 28px;
+    box-shadow: 0px 0px 10px 2px rgb(70, 70, 16);
+    
+  }
+  .cards:hover{
+    font-size:14px;
+    box-shadow: -6px 4px;
+  }
+
+  .cards-title
+  {
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  body
+  {
+    background-color: rgba(227, 232, 236, 0.979);
+  }
+
+  .cards-button
+  {
+    margin-top: 20px;
+    text-align: center;
+    width: 75%;
+    font-weight: bolder;
+    font-size: larger;
+    border-radius: 8px;
+  }
+  .cards-button:hover{
+    background-color: green;
+    font-size: 1.8rem;
+  }
+  .cards-p
+  {
+    color: black;
+    font-weight:lighter;
+    margin:2px;
+  }
+
+</style>
+
+<body>
+  <div class="container">
+    {% if subs %}
+      {% for i in range(0, subs | length,3) %}
+        {% set temp=subs[i:i+3] %}
+            <div class="row">
+                {% for j  in temp %}
+
+                <div class="col-sm-4">
+                  <div class="cards">
+                  <h5 class="cards-title">{{ j[1] }}</h5>
+                  <a href="{{url_for('student_test_instructions',sub_id=j[0] )}}" class="btn btn-success cards-button">Take Test</a>
+                </div>
+              </div>
+
+                {% endfor %}
+      
+             </div>
+      
+       {% endfor %}
+
+    {% endif %}
+  </div>
+</body>
+
+  {% endblock content %}

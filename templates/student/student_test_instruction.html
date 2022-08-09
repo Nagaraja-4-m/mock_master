@@ -1,0 +1,120 @@
+{% extends '/student/student_base.html' %}
+{% block content %}
+<style>
+    .cards{
+        border: 10px;
+        background-color: white;
+        padding: 28px;
+        width:100%;
+        height:25%;
+        margin: 10px;
+        border-radius: 26px;
+        box-shadow: -6px -2px;
+      }
+      .cards-title
+      {
+          text-align: center;
+          margin-top: -20px;
+          text-transform: uppercase;
+          letter-spacing: 7px;
+      }
+.button
+{
+    margin-left:40px;
+    width: 160px;
+    font-weight: bolder;
+    font-size: larger;
+    padding: 10px;
+    border-radius: 36px;
+    letter-spacing: 6px;
+}
+.button:hover
+{
+  font-size:1.8rem;
+}
+body
+{
+    font-family: Georgia, serif;
+}
+
+</style>
+
+<body>
+    <center>
+        <!-- Information -->
+        <div class="container" >
+            <div class="cards">
+                <h1 class="cards-title">Test Information</h1>
+                
+                {% if sub_details %}
+                <div class="table-responsive" style="margin:30px;width:64%;"> 
+                    <table class="table  table-bordered ">
+                        <tbody>
+                            <tr>
+                                <th colspan="2" style="text-align: center;"><h4><b>Test details</b></h4></th>
+                                
+                            </tr>
+                            <tr>
+                                <th>Category</th>
+                                <th> {{sub_details[2]}}</th>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <th> {{sub_details[1]}}</th>
+                            </tr>
+                            <tr>
+                                <th>Type</th>
+                                <th>MCQ</th>
+                            </tr>
+                            <tr>
+                                <th>Total Questions</th>
+                                <th>{{ total }}</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                {% endif %}
+
+                
+                <div class="table-responsive" style="margin:30px;width:64%;margin-top:-32px;"> 
+                    <table class="table  table-bordered ">
+                        <tbody>
+                            <tr>
+                                <th colspan="2" style="text-align: center;"><h4><b>Test Rules</b></h4></th>
+                                
+                            </tr>
+                            <tr>
+                                <th>1. All questions are Manditory.  </th>
+                                
+                            </tr>
+                            <tr>
+                                <th>2. Only one choice is correct.</th>
+                              
+                            </tr>
+                            <tr>
+                                <th>3. Each question carries 1 mark.</th>
+                              
+                            </tr>
+                            <tr>
+                                <th>4. No negative marks for wrong answers.</th>
+                               
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <a href="{{ url_for('student_test',sub_id=sub_details[0])}}">
+                    <button type="submit" class=" btn btn-success button" style="width:fit-content;">Start Test</button>
+                </a>
+                <br/>
+                
+            </div>
+        </div>
+
+    </center>
+        
+</body>
+   
+
+  {% endblock content %}

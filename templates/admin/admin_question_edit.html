@@ -1,0 +1,53 @@
+{% extends '/admin/admin_base.html' %}
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+    
+
+</head>
+<div class="container">
+    <center>
+<div class="cards">
+     <!-- input area -->
+     <div class="container pt-3 input-area">
+        <h2 class="cards-title">UPDATE QUESTION</h2>
+        <br/>
+        <p  style="color: #ff00bf; text-align: center; font-weight: bold; ">{{status}}</p>
+    
+        {% if q_details %}
+        <form action="{{ url_for('question_update',q_id=q_details[2])}}" method="POST" >
+                    <div class="form-group ">
+                        <select class="form-select input_field" style="width:100%; " name="subject_id" disabled>
+                            <option> Subject </option>
+                       </select>
+                       <input type="text" class="form-control input_field" name="question_id" value="{{ q_details[2] }}"  placeholder="Question ID" autocomplete="off" required/>
+                       <textarea type="text" class="form-control  input_field" name="question"  placeholder="Enter the question" rows="3" cols="30" required>{{ q_details[3] }}</textarea>
+                      <input type="text" class="form-control input_field" name="option_1" value="{{ q_details[4] }}"  placeholder="Choice  1" autocomplete="off" required/>
+                      <input type="text" class="form-control  input_field" name="option_2" value="{{ q_details[5] }}"  placeholder="Choice  2" autocomplete="off" required/>
+                      <input type="text" class="form-control  input_field" name="option_3"  value="{{ q_details[6] }}" placeholder="Choice  3" autocomplete="off" required/>
+                      <input type="text" class="form-control  input_field" name="option_4"  value="{{ q_details[7] }}" placeholder="Choice  4" autocomplete="off" required/>
+                      <select class="form-select input_field" style="width:100%; " name="correct_option" required>
+                        <option value="">Select Correct Option</option>
+                              <option value="1">Choice 1</option>
+                              <option value="2">Choice 2</option>
+                              <option value="3">Choice 3</option>
+                              <option value="4">Choice 4</option>
+                      </select> 
+                      <textarea type="text" class="form-control  input_field" name="solution"  placeholder="solution or explanation for the correct answer" rows="8" cols="30" >{{ q_details[9] }}</textarea>
+                      <div class=" input-btn">
+                          <button class="btn btn-success  buttn"  name="add_btn" type="submit">UPDATE QUESTION</button>
+                  </div>
+                </div>
+        </form>
+    {% endif %}
+        <br/>
+    </div>
+    <!-- input area end -->
+</div>
+</center>
+<br><br><br>
+</div>
+{% endblock content %}

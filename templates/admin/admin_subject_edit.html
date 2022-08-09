@@ -1,0 +1,37 @@
+{% extends '/admin/admin_base.html' %}
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+
+</head>
+<div class="container">
+<center>
+<div class="cards">
+     <!-- input area -->
+     <div class="container pt-3 ">
+        <h2 class="cards-title">UPDATE SUBJECT</h2>
+        <br/>
+        <p  style="color: rgb(255, 0, 191); text-align: center; font-weight: bold; font-size: 24px;">{{status}}</p>
+       
+        <form action="{{ url_for('subject_update',sub_id=subject_details[0])}}" method="POST" >
+                    <div class="form-group ">
+                            <input type="text" class="form-control input-lg input_field" name="subject_id"  value="{{ subject_details[0] }}" placeholder="Enter Subject Id" autocomplete="off" required/>
+                            <input type="text" class="form-control input-lg input_field" name="subject_name"  value="{{ subject_details[1] }}"  placeholder="Enter Subject name" autocomplete="off" required/>
+                            <input type="text" class="form-control input-lg input_field" name="subject_category"  value="{{ subject_details[2] }}" placeholder="Enter Subject Category" autocomplete="off" required/>
+                            <textarea class="form-control input-lg input_field" name="subject_description" required>{{ subject_details[3] }}</textarea>
+                            <div class=" input-btn">
+                                <button class="btn btn-success btn-lg buttn"  name="add_btn" type="submit">UPDATE</button>
+                        </div>
+                </div>
+        </form>
+        <br/>
+    </div>
+    <!-- input area end -->
+</div>
+</center>
+<br><br><br>
+</div>
+{% endblock content %}

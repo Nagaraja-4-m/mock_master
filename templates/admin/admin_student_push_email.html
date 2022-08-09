@@ -1,0 +1,37 @@
+{% extends '/admin/admin_base.html' %}
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+    
+
+</head>
+<div class="container">
+<center>
+     <!-- input area -->
+     <div class="cards">
+     <div class="container pt-3 ">
+        <h2 class="cards-title">SEND EMAIL</h2>
+        <br/>
+        <p  style="color: rgb(255, 0, 191); text-align: center; font-weight: bold; font-size: 24px;">{{status}}</p>
+       
+        <form action="{{ url_for('student_email',u_email=email )}}" method="POST" >
+                    <div class="form-group ">
+                            <input type="email" class="form-control input-lg input_field" name="email_to"  value="{{ email }}" placeholder="Email ID" autocomplete="off" readonly/>
+                            <input type="text" class="form-control input-lg input_field" name="email_subject"   placeholder="Subject" autocomplete="off" required/>
+                            <textarea type="text" class="form-control input-lg input_field" name="email_body" placeholder="Message" autocomplete="off" rows="6" cols="20" required></textarea>
+                            <div class=" input-btn">
+                                <button class="btn btn-success btn-lg buttn"  name="add_btn" type="submit">SEND</button>
+                        </div>
+                </div>
+        </form>
+        <br/>
+    </div>
+    </div>
+    <!-- input area end -->
+</center>
+<br><br><br>
+</div>
+{% endblock content %}

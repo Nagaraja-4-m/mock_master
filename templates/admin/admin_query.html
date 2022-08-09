@@ -1,0 +1,72 @@
+{% extends '/admin/admin_base.html' %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+</head>
+
+<style>
+  
+</style>
+
+<!-- display feedback details -->
+<div class="container">
+    {% if queries %}
+    <div class="table-responsive"> 
+        <table class="table table-hover   ">
+            <thead>
+                <tr class="active" >
+                    <th>Sl.no</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Query</th>
+                    <th>Replay</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            {% set count=0 %}
+            <tbody  class="table-bordered" >
+                {% for i in queries %}
+                    <tr>
+                        {%  set count=loop.index %}
+                        <th>{{count}}</th>
+                        
+                        <th>{{i[6]}}</th>
+
+                        <th>{{i[1]}}</th>
+
+                        <th>{{i[2]}}</th>
+
+                        <th>{{i[3]}}</th>
+
+                        <th>
+                            <form action="{{ url_for('update_query',email=i[1],sub=i[2])}}" autocomplete="off" method="POST">
+                                {% if i[5]==None %}
+                                     <textarea type="text"  class="form-control" name="replay"  placeholder="Write replay"  style="width: 100%;color: black;" cols="100" required></textarea>
+                                {% elif i[5]!=None %}
+                                     <textarea type="text"  class="form-control" name="replay"  placeholder="Write replay"  style="width: 100%;color: black;" cols="100" required>{{i[5]}}</textarea>
+                                {% endif %}
+                                <th><button class="btn btn-success  buttn"  name="add_btn" type="submit" style="width: 100%;margin-top:12px;">Update</button></th>
+                            </form>
+                        </th>
+                    
+                    </tr>
+                {% endfor %}   
+                            
+
+            </tbody>
+        </table>
+</div>
+
+{% elif queries | length ==0 %}
+<center> <p style="font-weight: bold; font-size: large;">No queries still.</p> </center>
+{% endif %}
+</div>
+
+<!-- display feedback details -->
+
+{% endblock content %}

@@ -1,0 +1,143 @@
+{% extends 'index_base.html' %}
+{% block content %}
+<head>
+    <title>Mock Master - About us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         .cards{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                border: 10px;
+                padding: 28px;
+                width:90%;
+                color:white;
+                height:max-content;
+                margin: 20px;
+                border-radius: 26px;
+               
+                background: #ffd89b;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+              }
+             
+
+              .cards-title
+                    {
+                        text-align: center;
+                        margin-top: 10px;
+                        text-transform: uppercase;
+                        letter-spacing: 7px;
+                    }
+                    .cards:hover{
+                        box-shadow: -6px 4px black; 
+                        
+                    }
+                    .input-field
+                    {
+                        margin-top: 20px;
+                        text-overflow: clip;
+                        padding-left: 40px;
+                        border-radius: 10px;
+                    }
+                    .input-field:hover{
+                        padding: 28px;
+                        border-color: #075a91;
+                        border-width: 3 px;
+                    }
+
+                    .button
+                    {
+                        margin-top: 40px;
+                        width:60%;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        font-size: large;
+                        border-radius: 20px;
+                        border-color: black;
+                        border-width: 2px;
+                        background: #ffd89b;  /* fallback for old browsers */
+                         background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+                         background: linear-gradient(to right, #19547b, #ffd89b); 
+
+                    }
+
+                    .button:hover
+                    {
+                        background: #ffd89b;  /* fallback for old browsers */
+                         background: -webkit-linear-gradient(to right, #075a91, #f0b24f);  /* Chrome 10-25, Safari 5.1-6 */
+                         background: linear-gradient(to right, #0763a0, #e9a840); 
+
+                    }
+
+                    .other-links{
+                        font-weight: bold;
+                        font-size: large;
+                        font-stretch: condensed;
+                        margin-top: 40px;
+                        
+                    }
+                    .x:hover
+                    {
+                        color: aqua;
+                    }
+
+                    .developer_info
+                    {
+                        margin-top: 42px;
+                        margin-bottom: 16px;
+                        font-size: large;
+                        background: white;
+                        color: black;
+                        border-radius: 20px;
+                        padding: 24px;
+                        box-shadow: 0px 0px 10px 2px rgb(9, 95, 121);
+                       
+
+                    }
+                    .developer_info:hover
+                    {
+                        box-shadow: 0px 0px 10px 4px rgb(9, 95, 121);
+                       
+
+                    }
+                    .developer_info p
+                    {
+                        text-align: start;
+                        letter-spacing: 1.5px;
+                       
+                    }
+                
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+        <div class="cards">
+            <h2 class="cards-title"> About us </h2>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="developer_info">
+                        <p>Nagaraja M</p>
+                        <p></p>
+                        <p><a href="mailto:nagarajam98plk@gmail.com"  style="text-decoration:underline; color: rgb(70, 36, 4);">nagarajam98plk@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+               
+                <div class="col-lg-6">
+                    <img class="img-responsive" src="../static/image/about_us.png " alt="About Us" width="400"> 
+                </div>
+       
+            </div>
+    </div>
+       
+    </div>
+</center>
+</body>
+{% endblock content %}

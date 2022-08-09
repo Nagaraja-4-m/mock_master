@@ -1,0 +1,115 @@
+
+<head>
+    <title>Mock Master -admin login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         .cards{
+                border: 10px;
+                padding: 28px;
+                width:50%;
+                color:white;
+                height:max-content;
+                margin: 20px;
+                border-radius: 26px;
+                box-shadow: -6px 4px black;
+                background: #ffd89b;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+              }
+              body{
+                  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background: #ffd89b;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+              }
+
+              .cards-title
+                    {
+                        text-align: center;
+                        margin-top: 10px;
+                        text-transform: uppercase;
+                        letter-spacing: 7px;
+                    }
+                    .cards:hover{
+                        box-shadow: -8px 6px black;
+                        
+                    }
+                    .input-field
+                    {
+                        margin-top: 20px;
+                        text-overflow: clip;
+                        padding-left: 40px;
+                        border-radius: 10px;
+                    }
+                    .input-field:hover{
+                        padding: 28px;
+                        border-color: #075a91;
+                        border-width: 3 px;
+                    }
+
+                    .button
+                    {
+                        margin-top: 40px;
+                        width:60%;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        font-size: large;
+                        border-radius: 20px;
+                        border-color: black;
+                        border-width: 2px;
+                        background: #ffd89b;  /* fallback for old browsers */
+                         background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+                         background: linear-gradient(to right, #19547b, #ffd89b); 
+
+                    }
+
+                    .button:hover
+                    {
+                        background: #ffd89b;  /* fallback for old browsers */
+                         background: -webkit-linear-gradient(to right, #075a91, #f0b24f);  /* Chrome 10-25, Safari 5.1-6 */
+                         background: linear-gradient(to right, #0763a0, #e9a840); 
+
+                    }
+
+                    .other-links{
+                        font-weight: bold;
+                        font-size: large;
+                        font-stretch: condensed;
+                        margin-top: 40px;
+                        
+                    }
+                    .x:hover
+                    {
+                        color: aqua;
+                    }
+
+                
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+        <div class="cards">
+            <h2 class="cards-title"> Admin Login </h2>
+            <p style="color:rgb(11, 36, 27);font-weight: bolder; font-size: large; margin-top: 20px;"> {{ status }}</p>
+            <form action="{{ url_for('admin_login')}}" autocomplete="off" method="POST">
+                    <input type="email" name="admin_email" class="form-control input-lg input-field" placeholder= "Email id" required>
+                    <input type="password" name="admin_password" class="form-control input-lg input-field" placeholder= "Password " pattern=".{6,}" title="Password must contain 6 or more characters" required>
+                    <a href=""><button type="submit" class="btn  button" style="color: white;" >login</button> </a>
+            </form>
+            <!-- <div class="other-links">
+                     <span style="text-align: start;">Don't have account? <a href="{{url_for('register')}}" style="text-decoration:underline; color: rgb(9, 57, 121);" class="x">Register here</a>
+                    </span>
+                     <a href="{{ url_for('forgot_password')}}" style="text-decoration:underline; color: rgb(9, 57, 121);"><span style="text-align: right; margin-left:100px ;">Forgot password?? </span></a>
+            </div> -->
+        </div>
+    </div>
+</center>
+</body>

@@ -1,0 +1,299 @@
+{% extends '/student/student_base.html' %}
+{% block content %}
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <style>
+         .cards{
+    border: 10px;
+    background-color: white;
+    padding: 28px;
+    width:100%;
+    height:25%;
+    margin: 10px;
+    border-radius: 26px;
+    box-shadow: -6px -2px;
+  }
+  .cards-title
+  {
+      text-align: center;
+      margin-top: -20px;
+      text-transform: uppercase;
+      letter-spacing: 7px;
+  }
+
+  body
+  {
+    background-color: rgba(227, 232, 236, 0.979);
+    font-family: Georgia, serif;
+  }
+  .inr-tbl
+  {
+    margin-top: 32px;
+    box-shadow: 4px 4px;
+  }
+  .inr-tbl:hover
+  {
+      font-size:1.5rem;
+      cursor: pointer;
+      box-shadow: -4px 4px;
+  }
+ 
+  .question-area-correct
+  {
+      background-color:rgba(168, 241, 190, 0.897);
+      margin-bottom: 28px;
+      padding: 18px;
+      border-radius: 16px;
+         box-shadow: 0px -2px #55d2db;
+
+  }
+  .question-area-wrong
+  {
+      background-color:rgba(255, 172, 172, 0.87);
+      margin-bottom: 28px;
+      padding: 18px;
+      border-radius: 16px;
+         box-shadow: 0px -2px #55d2db;
+
+  }
+
+  .question-area-question{
+      font-weight: bolder;
+      font-size:20px;
+      font-style: normal;
+    }
+
+
+.question-area-mcs
+{
+    margin-top: 10px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 12px;
+}
+.question-area-mcs-radio
+{
+    font-size:1.4em;
+    font-weight: bolder;
+    margin: 20px;
+}
+
+
+.radio-values
+{
+    margin-left: 8px;
+}
+
+    </style>
+</head>
+<body>
+
+    {% set total= res|length %}
+    {% set wrong= total-correct %}  
+
+      <!-- PIE chart -->
+        <script type="text/javascript">
+            // Load google charts
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+            // Draw the chart and set the chart values
+            function drawChart() {
+                var x=parseInt('{{ correct }}')
+                var y=parseInt('{{ wrong }}')
+                //document.write(x)
+            var data = google.visualization.arrayToDataTable([
+            ['Task', 'Result'],
+            ['', 0],
+            ['Wrong Answer', y],
+            ['', 0],
+            ['Correct Answer',x]]);
+            // Optional; add a title and set the width and height of the chart
+            var options = {'title':'Result ', 'width':520, 'height':300};
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+            }
+            </script>
+
+
+<!-- Body -->
+    <div class="container" id="xyz">
+
+        <!-- Result section -->
+        <div class="cards" id="result" style="box-shadow: -6px 2px;">
+            <h1 class="cards-title">Result</h1>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th ><div id="piechart" ></div></th>
+                            <th>
+                                <table class="table table-bordered inr-tbl" >
+                                    <body>
+                                        <tr style="background-color: rgb(89, 214, 245);">
+                                            <th>Total Questions</th>
+                                            <th>{{ total }}</th>
+                                        </tr>
+                                        <tr style="background-color: rgb(97, 245, 153);">
+                                            <th>Correct Answers</th>
+                                            <th>{{ correct }}</th>
+                                        </tr>
+                                        <tr  style="background-color: rgb(247, 105, 80);">
+                                            <th>Wrong Answers</th>
+                                            <th>{{ wrong }}</th>
+                                        </tr>
+                                        <tr style="background-color: rgb(235, 245, 97);">
+                                            <th>Maximum Marks</th>
+                                            <th>{{ total*1 }}</th>
+                                        </tr>
+                                        <tr style="background-color: rgb(135, 240, 175);">
+                                            <th>Obtained Marks</th>
+                                            <th>{{ correct*1 }}</th>
+                                        </tr>
+                                        <tr style="background-color: rgb(25, 241, 108);">
+                                            <th>Result</th>
+                                            <th>{{ "{:.2f}".format((correct/total)*100) }}%</th>
+                                        </tr>
+                                    </body>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div> 
+        </div>
+
+
+        <div style="margin-top: 80px;"></div>
+
+        <!-- Review secttion -->
+        <div class="cards" >
+            <h1 class="cards-title"  style="margin-bottom: 20px;">Review</h1>
+                {% set count=1 %}
+                        {% for i in range(0,questions | length) %}
+
+                            {% if res[i][3] %}
+                                 <div class="question-area-correct">
+                                        <div class="question-area-question">
+                                            {%  set count=loop.index %}
+                                            {{ count }}. {{ questions[i][3]}}
+                                       </div>
+                                       <div class="question-area-mcs">
+                                        <form action="#" method="POST">
+                                              <div class="form-check question-area-mcs-radio" >
+                                                <input type="radio"><span class="radio-values">{{ questions[i][4] }}</span>
+                                               </div>
+                                               <div class="form-check question-area-mcs-radio">
+                                               <input type="radio"    value="2"><span class="radio-values">{{ questions[i][5] }}</span>
+                                               </div>
+                                               <div class="form-check question-area-mcs-radio">
+                                                   <input type="radio"    value="3"><span class="radio-values">{{ questions[i][6] }} </span>
+                                               </div>
+                                               <div class="form-check question-area-mcs-radio">
+                                               <input type="radio"    value="4"><span class="radio-values">{{ questions[i][7] }}</span>
+                                               </div> 
+                                          </div>
+                                          <textarea type="text" style="width: 100%; font-size: large;"  placeholder="solution or explanation for the correct answer" rows="8" cols="1" readonly>
+                                            Explanation:
+                                            {% set x=questions[i][9].split(':::') %}
+                                                {% for k in x %}
+                                                   {{ k }}
+                                                {% endfor %}
+                                          </textarea>
+                                        </form>
+                                 </div>
+
+                            {% elif res[i][3]==False %}
+                                 <div class="question-area-wrong">
+                                    <div class="question-area-question">
+                                        {%  set count=loop.index %}
+                                        {{ count }}. {{ questions[i][3]}}
+                                   </div>
+                                   <div class="question-area-mcs">
+                                    <form action="#" method="POST">
+                                          <div class="form-check question-area-mcs-radio" >
+                                            <input type="radio" ><span class="radio-values">{{ questions[i][4] }}</span>
+                                           </div>
+                                           <div class="form-check question-area-mcs-radio">
+                                           <input type="radio"    ><span class="radio-values">{{ questions[i][5] }}</span>
+                                           </div>
+                                           <div class="form-check question-area-mcs-radio">
+                                               <input type="radio"  ><span class="radio-values">{{ questions[i][6] }} </span>
+                                           </div>
+                                           <div class="form-check question-area-mcs-radio">
+                                           <input type="radio"   ><span class="radio-values">{{ questions[i][7] }}</span>
+                                           </div> 
+                                      </div>
+                                      <textarea type="text" style="width: 100%; font-size: large;"   placeholder="solution or explanation for the correct answer" rows="8" cols="1" readonly>
+                                        {% set x=questions[i][9].split(':::') %}
+                                        Explanation:
+                                            {% for k in x %}
+                                               {{ k }}
+                                            {% endfor %}
+                                      </textarea>
+                                    </form>
+                                 </div>
+                            
+                            {% endif %}
+                        {% endfor %}
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <a href="{{ url_for('student_dashboard')}}"> <button type="submit" class="btn btn-danger  button" style="width: 100%;" >CLOSE</button></a>
+                                        </th>
+                                        <th>
+                                             <button type="submit" onclick="printDiv('xyz')" class="btn btn-primary  button" style="width: 100%;" >PRINT</button>
+
+                                            <script type="text/javascript">
+                                                function printDiv(divName) {
+                                                     var printContents = document.getElementById(divName).innerHTML;
+                                                     var originalContents = document.body.innerHTML;
+                                                
+                                                     document.body.innerHTML = printContents;
+                                                
+                                                     window.print();
+                                                
+                                                     document.body.innerHTML = originalContents;
+                                                }
+                                                </script> 
+                                        </th>
+                                       
+                                       
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                      
+                    
+                </div>
+                        
+                  
+        
+                           
+
+
+        </div>
+
+        
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+
+

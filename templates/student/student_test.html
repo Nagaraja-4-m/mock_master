@@ -1,0 +1,221 @@
+{% extends '/student/student_base.html' %}
+{% block content %}
+<style>
+  .cards{
+    border: 10px;
+    background-color: whitesmoke;
+    padding: 40px;
+    width:100%;
+    height:25%;
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 36px;
+    box-shadow: -4px -2px;
+  }
+
+  .question-area
+  {
+      background-color:rgba(237, 243, 242, 0.993);
+      margin-bottom: 28px;
+      padding: 18px;
+      border-radius: 16px;
+         box-shadow: 0px 0px 10px 4px #576a6b;
+
+  }
+
+  .question-area-question{
+      font-weight: bolder;
+      font-size:20px;
+      font-style: normal;
+    }
+
+    .question-area-question:hover{
+      font-weight: bolder;
+      font-size:22px;
+      font-style: normal;
+      cursor:pointer;
+    }
+
+
+.question-area-mcs
+{
+    margin-top: 10px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 12px;
+}
+.question-area-mcs-radio
+{
+    font-size:1.4em;
+    font-weight: bolder;
+    margin: 20px;
+}
+.question-area-mcs-radio:hover
+{
+    font-size:1.5em ;
+    color: rgb(20, 204, 20);
+    font-weight: bolder;
+}
+
+.radio-values
+{
+    margin-left: 8px;
+}
+  body
+  {
+    background-color: rgba(227, 232, 236, 0.979);
+  }
+
+  input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #10cc19;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 3px solid white;
+    }
+.timer
+{
+    position:fixed;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 10px;
+    width: fit-content;
+    background-color:rgba(255, 255, 0, 0.74);
+    color: rgba(255, 0, 0, 0.884);
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button
+{
+    margin-left:40px;
+    width: 160px;
+    font-weight: bolder;
+    box-shadow: -2px 2px #8f918f;
+    font-size: larger;
+    padding: 10px;
+    border-radius: 36px;
+    letter-spacing: 6px;
+}
+.button:hover
+{
+  font-size:1.8rem;
+}
+
+
+</style>
+
+<body>
+         <!-- timer 
+            <div class="container-fluid">
+                  <div class="row">
+                        <div class="col-lg-11"></div>
+                        <div class="col-lg-1">
+                            <div class="timer">
+                                 09:59
+                            </div>
+                        </div>
+                </div>
+            </div>-->
+
+
+    <!-- Information table -->
+   <!-- <div class="container" >
+        <div class="table-responsive cards" style="font-size: larger;background-color: white;"> 
+            <table class="table  table-bordered  ">
+                <tbody>
+                    <tr>
+                        <th>Category</th>
+                        <th>{{ subject_name[2] }}</th>
+                    </tr>
+                    <tr>
+                        <th>Subject</th>
+                        <th>{{ subject_name[1] }}</th>
+                    </tr>
+                    <tr>
+                        <th>Type</th>
+                        <th>Multiple Choice Questions</th>
+                    </tr>
+                    <tr>
+                        <th>Total Questions</th>
+                        <th>{{ total }}</th>
+                    </tr>
+                    <tr>
+                        <th>Duration</th>
+                        <th>{{total*1+5 }} Minutes</th>
+                    </tr>
+                    <tr>
+                        <th>Rules</th>
+                        <th><table>
+                            <tr>
+                                <th>1. All questions are Manditory.   </th>
+                            </tr>
+                            <tr>
+                                <th>2. Each question carries 1 mark.    </th>
+                            </tr>
+                            <tr>
+                                <th>3. No negative marks.    </th>
+                            </tr>
+                        </table>
+                    </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+    </div>  -->
+    <!-- Questions -->
+    {% if questions %}
+        <div class="container">
+            <div class="cards">
+
+                {% set count=1 %}
+                 {% for i in questions %}
+
+                    <div class="question-area">
+                        <div class="question-area-question">
+                              {%  set count=loop.index %}
+                                {{ count }}. {{ i[3]}}
+                        </div>
+                        <div class="question-area-mcs">
+                            <form action="{{ url_for('student_test_results',sub_id=subject_name[0])}}" method="POST">
+                                <div class="form-check question-area-mcs-radio" >
+                                    <input type="radio"   name="{{ i[2] }}" value="1" required><span class="radio-values">{{ i[4] }}</span>
+                                </div>
+                                <div class="form-check question-area-mcs-radio">
+                                    <input type="radio"   name="{{ i[2] }}" value="2"><span class="radio-values">{{ i[5] }}</span>
+                                </div>
+                                <div class="form-check question-area-mcs-radio">
+                                    <input type="radio"   name="{{ i[2] }}" value="3"><span class="radio-values">{{ i[6] }} </span>
+                                </div>
+                                <div class="form-check question-area-mcs-radio">
+                                    <input type="radio"   name="{{ i[2] }}" value="4"><span class="radio-values">{{ i[7] }}</span>
+                                </div> 
+                        </div>
+                    </div>
+                  {% endfor %}
+        
+                            <button type="submit" class="btn btn-success mt-3 button" >SUBMIT</button>
+                      </form>
+
+    </div>
+</div>
+     
+
+    {% endif %}
+    
+</body>
+   
+
+
+  {% endblock content %}

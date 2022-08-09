@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mock Master</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+  body{
+    background: #ffd89b;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+</style>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ url_for('welcome')}}">MOCK MASTER</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="{{ url_for('student_dashboard')}}">Home</a></li>
+      <li><a href="{{ url_for('student_performance')}}">My performance</a></li>
+      <li  class="dropdown" style="margin-right: 8px; "><a class="dropdown-toggle" data-toggle="dropdown" href="#">Queries<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ url_for('student_help')}}"><span class="glyphicon glyphicon-question-sign"></span> Ask query</a></li>
+          <li><a href="{{ url_for('student_help_replay')}}"><span class="glyphicon glyphicon-envelope"></span> View replay</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right" >
+      <li  class="dropdown" style="margin-right: 16px; font-size: 16px;"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class= "glyphicon glyphicon-user"></span><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ url_for('student_profile') }}"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+          <li><a href="{{ url_for('logout')}}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <br><br><br>
+  {% block content %}
+
+  {% endblock content %}
+
+  {% include "/footer.html" %}
+</body>
+</html>

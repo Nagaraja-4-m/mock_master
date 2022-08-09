@@ -1,0 +1,163 @@
+
+{% extends '/admin/admin_base.html' %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <!-- jQuery library -->
+    <script  type="text/javascript" src="../../static/js/btjs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+
+<style>
+
+
+.left-sub-menu {
+    padding: 0px;
+} .left-sub-menu ul {
+    /* padding: 0px 0px 10px 40px; */
+}
+.left-sub-menu ul li {
+    list-style-type: none;
+    border-bottom: 1px solid #002856;
+}
+.left-sub-menu ul li:last-child {
+    border-bottom: 0px solid #303b40;
+}
+.left-sub-menu ul li a {
+    display: block;
+    font-size: 13.5px;
+    padding: 10px 24px 10px 45px;
+}
+.left-sub-menu ul li a:hover {
+    background: none;
+    padding-left: 55px;
+}
+.left-sub-menu ul li a:focus {
+    background: none;
+}
+.left-sub-menu ul li a:after {
+    display: none;
+}
+    .table_content
+    {
+        font-size: large;
+    }
+    .edit_buttn
+    {
+        background-color: rgb(34, 142, 236);
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size:16px;       
+    }
+    .delete_buttn
+    {
+        background-color: rgb(238, 16, 9);
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size:16px;       
+    }
+    .delete_buttn:hover
+    {
+        background-color: rgb(156, 15, 10);   
+        color: white;
+    }
+    .edit_buttn:hover
+    {
+        background-color: rgb(8, 102, 185);
+        color: white;
+    }
+    .mytable:hover
+    {
+        background-color: aqua;
+    }
+</style>
+
+<!-- display subject details -->
+
+<!--  select options -->
+<div class="container">
+</div>
+
+<div class="container">
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    <div class="table-responsive"> 
+        <table class="table table-hover table_content  ">
+            <thead>
+                <tr class="active" >
+                    <th>Sl.no</th>
+                    <th>Subject Id</th>
+                    <th>Subject Name</th>
+                    <th>Category</th>
+                    <th >Questions</th>
+                    <th style="padding-left: 52px;">Action</th>
+                </tr>
+            </thead>
+            {% set count=0 %}
+            <tbody  class="table-bordered" >
+                {% for i in sub_list %}
+                    <tr class="mytable">
+                        {%  set count=loop.index %}
+                        <th>{{count}}</th>
+                        
+                        {% for item in i %}
+                            <th>{{item}}</th>
+                        {% endfor %} 
+                    
+                        <th>{{ No_Questions[count-1] }}</th>
+                    
+                        <th>
+                            <table>
+                                <tr>
+                                    <th> <a  href="{{ url_for('subject_edit',sub_id=i[0])}}" ><button class="btn edit_buttn"  name="edit_btn" type="submit">Edit</button></a></th>
+                                    <th><a  href="{{ url_for('subject_delete')}}"><button onclick="" class="btn delete_buttn"  name="delete_btn" type="submit" value="{{i[0]}}">Delete</button></a></th>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                {% endfor %}   
+                            
+
+            </tbody>
+        </table>
+</div>
+
+<div class="dropdown btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+    Subjects
+    <span class="caret"></span>
+        <ul class="dropdown-menu">
+           <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+             <li><a href="#">JavaScript</a></li>
+    </ul>
+  </div>
+  <ul class="collapsible" data-collapsible="accordion">
+    <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> All Courses</a>
+        <div class="collapsible-body left-sub-menu">
+            <ul>
+                <li><a href="admin-all-courses.php">All Course</a>
+                </li>
+                <li><a href="admin-add-courses.php">Add New Course</a>
+                </li>
+               </ul>
+        </div>
+    </li>
+      </ul>
+</div>
+
+<!-- display subject details -->
+
+{% endblock content %}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mock Master</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    footer
+    {
+      background-color: rgba(17, 16, 16, 0.897);
+      text-align: center;
+      color: #9b9696;
+      width: 100%;
+      padding: 16px;
+      margin-top: 140px;
+      flex-shrink: 0;
+      bottom: 0;
+    
+    }
+    .footer-item:hover
+    {
+      color:white;
+      font-weight: normal;
+    }
+  
+    body{
+      background: #ffd89b;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+</style>
+</head>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid"> 
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ url_for('welcome')}}">MOCK MASTER</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li ><a href="{{ url_for('about_us')}}">About Us</a></li>
+        
+      </ul>
+    <ul class="nav navbar-nav navbar-right" >
+      <li ><a href="{{ url_for('register')}}">Register</a></li>
+      <li ><a href="{{ url_for('login')}}">Login</a></li>
+    </ul>
+  </div>
+</nav>
+  {% block content %}
+
+  {% endblock content %}
+
+</html>
