@@ -7,10 +7,10 @@ REQUIREMENTS:
 <ul>
   <li>Python 3</li>
   <li>MySQL</li>
-  <li>Flask (install by PIP 'pip install Flask')</li>
-  <li>MySQL db (install by PIP 'pip install mysqlclient')</li>
-  <li>smtplib (install by PIP 'pip install secure-smtplib')</li>
-  <li>Simple JSON (install using PIP 'pip install simplejson')</li>
+  <li>Flask (install by PIP  `pip install Flask`)</li>
+  <li>MySQL db (install by PIP `pip install mysqlclient`)</li>
+  <li>smtplib (install by PIP `pip install secure-smtplib`)</li>
+  <li>Simple JSON (install using PIP `pip install simplejson`)</li>
   </ul>
   <br/>
 Steps to run application:
